@@ -335,7 +335,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
   private writeGenerationIconBubble(): TemplateResult {
     const generationEntities = ['generation_to_grid_entity', 'generation_to_house_entity', 'generation_to_battery_entity'];
 
-    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', null);
+    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', 'generation_extra_entity');
   }
 
   private writeGridIconBubble(): TemplateResult {
