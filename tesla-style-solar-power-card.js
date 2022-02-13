@@ -202,14 +202,14 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                   class="acc_text"
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 ></div>
-                ${t} ${e}`:U` <ha-icon class="acc_icon" icon="${n}"></ha-icon>
-            <div
-              class="acc_text"
-              style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
-            ></div>
-            ${t}
-            ${e}
-            `}
+                ${t} ${e}`:U`
+                <ha-icon class="acc_icon" icon="${n}"></ha-icon>
+                <div
+                  class="acc_text"
+                  style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
+                ></div>
+                ${t} ${e}
+              `}
         </div>
       </div>
     </div>`}writeBatteryBubbleDiv(t,e,i,n,s,r,o,a){return void 0!==o&&("mdi:battery-medium"!==n&&"mdi:battery"!==n||(n=this.getBatteryIcon(parseFloat(o),t))),this.writeBubbleDiv(t,e,i,n,s,r,o,a)}getBatteryIcon(t,e){let i=t;t<=5&&(i=0);const n=10*Math.ceil(i/10);let s="-"+n.toString(),r="-charging";return e<=0&&(r=""),100===n&&(s=""),n<=5&&(s="-outline"),"mdi:battery"+r+s}writeAppliancePowerLineAndCircle(t,e){if(null==this.solarCardElements.get("appliance"+t+"_consumption_entity"))return U``;let i;return i=1===t?"top:"+22.5*this.pxRate+"px;":"bottom:"+15*this.pxRate+"px;",U` <div
