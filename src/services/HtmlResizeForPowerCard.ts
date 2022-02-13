@@ -40,6 +40,7 @@ export class HtmlResizeForPowerCard {
       }
       if (className === 'ha-icon-top') {
         icon.style.marginTop = -10 + 'px';
+        icon.style.marginBottom = 6 + 'px';
       }
     });
     teslaCardElement.querySelectorAll<HTMLElement>('.acc_text').forEach(icontext => {

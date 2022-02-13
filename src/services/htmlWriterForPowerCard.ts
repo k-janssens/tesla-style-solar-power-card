@@ -39,7 +39,8 @@ export class HtmlWriterForPowerCard {
       >
         ${
           extraValue !== null
-            ? html` <div
+            ? html`
+                <div
                   class="acc_text_extra"
                   style="font-size:${3 * this.pxRate + 'px'};
                         top: ${1 * this.pxRate + 'px'};
@@ -51,15 +52,18 @@ export class HtmlWriterForPowerCard {
                 <div
                   class="acc_text"
                   style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
-                ></div>
-                ${mainValue} ${mainUnitOfMeasurement}`
+                >
+                  ${mainValue} ${mainUnitOfMeasurement}
+                </div>
+              `
             : html`
                 <ha-icon class="ha-icon-top" icon="${icon}"></ha-icon>
                 <div
                   class="acc_text"
                   style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
-                ></div>
-                ${mainValue} ${mainUnitOfMeasurement}
+                >
+                  ${mainValue} ${mainUnitOfMeasurement}
+                </div>
               `
         }
         </div>
