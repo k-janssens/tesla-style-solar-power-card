@@ -195,7 +195,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                         top: ${1*this.pxRate+"px"};
                         width: ${10*this.pxRate+"px"};"
             >
-              ${o} ${a}
+              ${o} <br/> ${a}
             </div>`:U``}
         <ha-icon class="acc_icon" icon="${n}"></ha-icon>
         <div
