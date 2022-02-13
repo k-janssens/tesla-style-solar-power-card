@@ -336,21 +336,21 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     const generationEntities = ['generation_to_grid_entity', 'generation_to_house_entity', 'generation_to_battery_entity'];
 
     // return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', 'generation_extra_entity');
-    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', null);
+    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', 'null');
   }
 
   private writeGridIconBubble(): TemplateResult {
     const gridEntities = ['-generation_to_grid_entity', 'grid_to_house_entity', '-battery_to_grid_entity', 'grid_to_battery_entity'];
 
     // return this.writeIconBubble(gridEntities, 'acc_left', 'grid_icon', 'grid_entity', 'grid_extra_entity');
-    return this.writeIconBubble(gridEntities, 'acc_left', 'grid_icon', 'grid_entity', null);
+    return this.writeIconBubble(gridEntities, 'acc_left', 'grid_icon', 'grid_entity', 'null');
   }
 
   private writeHouseIconBubble(): TemplateResult {
     const houseEntities = ['generation_to_house_entity', 'grid_to_house_entity', 'battery_to_house_entity'];
 
     // return this.writeIconBubble(houseEntities, 'acc_right', 'house_icon', 'house_entity', 'house_extra_entity');
-    return this.writeIconBubble(houseEntities, 'acc_right', 'house_icon', 'house_entity', null);
+    return this.writeIconBubble(houseEntities, 'acc_right', 'house_icon', 'house_entity', 'null');
   }
 
   private writeBatteryIconBubble(): TemplateResult {
