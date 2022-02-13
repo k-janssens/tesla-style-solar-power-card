@@ -302,7 +302,6 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
         position:relative;
         cursor:pointer;
         background-color: rgba(210, 210, 210, 0.2)
-        font-family: monospace;
     }
     .acc_icon {
         --mdc-icon-size: 40px;
@@ -312,6 +311,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
         text-align: center;
         white-space: nowrap;
         font-weight: bold;
+        font-family: monospace;
     }
     .acc_text_extra {
       overflow: hidden;

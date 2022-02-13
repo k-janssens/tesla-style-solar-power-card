@@ -667,7 +667,6 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         position:relative;
         cursor:pointer;
         background-color: rgba(210, 210, 210, 0.2)
-        font-family: monospace;
     }
     .acc_icon {
         --mdc-icon-size: 40px;
@@ -677,6 +676,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         text-align: center;
         white-space: nowrap;
         font-weight: bold;
+        font-family: monospace;
     }
     .acc_text_extra {
       overflow: hidden;
