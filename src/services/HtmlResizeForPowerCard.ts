@@ -40,7 +40,7 @@ export class HtmlResizeForPowerCard {
       }
       if (className === 'ha-icon-top') {
         icon.style.marginTop = -10 + 'px';
-        icon.style.marginBottom = 6 + 'px';
+        icon.style.marginBottom = 3 + 'px';
       } else {
         icon.style.marginTop = -2 + 'px';
         icon.style.marginBottom = 0 + 'px';
