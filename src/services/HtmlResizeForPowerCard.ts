@@ -36,13 +36,6 @@ export class HtmlResizeForPowerCard {
       if (icon != null) {
         icon.style.height = 9 * pxRate + 'px';
         icon.style.width = 9 * pxRate + 'px';
-      }
-    });
-    teslaCardElement.querySelectorAll('ha-icon-top').forEach((_currentValue, currentIndex, icons) => {
-      const icon = <HTMLElement>icons[currentIndex].shadowRoot?.querySelector('ha-svg-icon');
-      if (icon != null) {
-        icon.style.height = 9 * pxRate + 'px';
-        icon.style.width = 9 * pxRate + 'px';
         icon.style.marginTop = -10 + 'px';
       }
     });
