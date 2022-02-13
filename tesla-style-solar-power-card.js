@@ -198,7 +198,10 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
               ${o} ${a}
             </div>`:U``}
         <ha-icon class="acc_icon" icon="${n}"></ha-icon>
-        <div class="acc_text" style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate-10+"px"}; width: ${10*this.pxRate+"px"}">
+        <div
+          class="acc_text"
+          style="font-size:${30*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
+        >
           ${t} ${e}
         </div>
       </div>
@@ -213,7 +216,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox='${"0 0 "+(12*this.pxRate-5*(t-1))+" "+(12*this.pxRate-5*(t-1))}'
+        viewBox="${"0 0 "+(12*this.pxRate-5*(t-1))+" "+(12*this.pxRate-5*(t-1))}"
         preserveAspectRatio="xMinYMax slice"
         style="height:${12*this.pxRate-5*(t-1)+"px"};width:10px}"
         class="acc_appliance${t}_line_svg"

@@ -50,7 +50,7 @@ export class HtmlWriterForPowerCard {
         <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
         <div
           class="acc_text"
-          style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate - 10 + 'px'}; width: ${10 * this.pxRate + 'px'}"
+          style="font-size:${30 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
         >
           ${mainValue} ${mainUnitOfMeasurement}
         </div>
