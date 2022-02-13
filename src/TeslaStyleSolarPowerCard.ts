@@ -26,7 +26,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
 
   @internalProperty() private oldWidth = 100;
 
-  public pxRate = 6;
+  public pxRate = 4;
 
   private teslaCardElement?: HTMLElement;
 
