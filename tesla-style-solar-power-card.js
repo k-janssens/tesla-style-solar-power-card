@@ -189,7 +189,8 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
         style="${"width:"+9*this.pxRate+"px; height: "+9*this.pxRate+"px; padding:"+5*this.pxRate+"px;"}"
         @click="${()=>this._handleClick(r)}"
       >
-        ${null!==o?U` <div
+        ${null!==o?U`
+                <div
                   class="acc_text_extra"
                   style="font-size:${3*this.pxRate+"px"};
                         top: ${1*this.pxRate+"px"};
@@ -202,15 +203,15 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                   class="acc_text"
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 >
-                ${t} ${e}
+                  ${t} ${e}
                 </div>
-                `:U`
+              `:U`
                 <ha-icon class="ha-icon-top" icon="${n}"></ha-icon>
                 <div
                   class="acc_text"
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 >
-                ${t} ${e}
+                  ${t} ${e}
                 </div>
               `}
         </div>
