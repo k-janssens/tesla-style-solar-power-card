@@ -52,7 +52,8 @@ export class HtmlWriterForPowerCard {
           class="acc_text"
           style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
         >
-          ${mainValue} ${mainUnitOfMeasurement}
+          ${mainValue} <br />
+          ${mainUnitOfMeasurement}
         </div>
       </div>
     </div>`;
