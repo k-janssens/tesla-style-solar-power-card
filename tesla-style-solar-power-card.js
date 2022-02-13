@@ -195,7 +195,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                   class="acc_text"
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 >
-                ${o} ${a}
+                  ${o} ${a}
                 </div>
               `:U`
                 <ha-icon class="ha-icon-top" icon="${n}"></ha-icon>
@@ -363,6 +363,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     .generation_entity .acc_icon,
     .generation_entity{
       color: var(--warning-color);
+      box-shadow: 0px 0px 5px 0px #F8AE69;
     }
     .house_entity{
       color: #1CF1AA;
@@ -377,6 +378,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       border: 2px solid #1CF1AA;
       background-color: rgba(180, 250, 225, 0.2)
       color: #1CF1AA;
+      box-shadow: 0px 0px 5px 0px #1CF1AA;
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -403,14 +405,24 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       fill: #35C3DF;
     }
     .battery_extra_entity,
-    .battery_entity{
+    .battery_entity {
       border: 2px solid #35C3DF;
       color: #35C3DF;
       background-color: rgba(160, 245, 210, 0.2)
+      box-shadow: 0px 0px 5px 0px #35C3DF;
     }
-    .battery_extra_text{
+    .battery_entity {
+      color: #35C3DF;
+      box-shadow: 0px 0px 5px 0px #ffffff;
+    }
+    .battery_extra_text {
       position:absolute;
       top:8px;
+    }
+    .grid_entity {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      box-shadow: 0px 0px 5px 0px #ffffff;
     }
     br.clear {
       clear:both;

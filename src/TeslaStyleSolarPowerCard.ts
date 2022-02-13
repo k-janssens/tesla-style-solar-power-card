@@ -736,6 +736,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     .generation_entity .acc_icon,
     .generation_entity{
       color: var(--warning-color);
+      box-shadow: 0px 0px 5px 0px #F8AE69;
     }
     .house_entity{
       color: #1CF1AA;
@@ -750,6 +751,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
       border: 2px solid #1CF1AA;
       background-color: rgba(180, 250, 225, 0.2)
       color: #1CF1AA;
+      box-shadow: 0px 0px 5px 0px #1CF1AA;
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -776,14 +778,24 @@ export class TeslaStyleSolarPowerCard extends LitElement {
       fill: #35C3DF;
     }
     .battery_extra_entity,
-    .battery_entity{
+    .battery_entity {
       border: 2px solid #35C3DF;
       color: #35C3DF;
       background-color: rgba(160, 245, 210, 0.2)
+      box-shadow: 0px 0px 5px 0px #35C3DF;
     }
-    .battery_extra_text{
+    .battery_entity {
+      color: #35C3DF;
+      box-shadow: 0px 0px 5px 0px #ffffff;
+    }
+    .battery_extra_text {
       position:absolute;
       top:8px;
+    }
+    .grid_entity {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      box-shadow: 0px 0px 5px 0px #ffffff;
     }
     br.clear {
       clear:both;
