@@ -167,7 +167,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
   protected render(): TemplateResult | void {
     if (this.error !== '') return this._showError();
 
-    this.pxRate = this.clientWidth / 100 + 2;
+    this.pxRate = this.clientWidth / 100;
     const gap = this.clientWidth / 50;
     const half = 22 * this.pxRate;
     //
@@ -335,7 +335,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
   private writeGenerationIconBubble(): TemplateResult {
     const generationEntities = ['generation_to_grid_entity', 'generation_to_house_entity', 'generation_to_battery_entity'];
 
-    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', 'generation_extra_entity');
+    return this.writeIconBubble(generationEntities, 'acc_top', 'generation_icon', 'generation_entity', null);
   }
 
   private writeGridIconBubble(): TemplateResult {
