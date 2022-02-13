@@ -43,7 +43,7 @@ export class HtmlResizeForPowerCard {
         icon.style.marginBottom = 6 + 'px';
       } else {
         icon.style.marginTop = -2 + 'px';
-        icon.style.marginBottom = 3 + 'px';
+        icon.style.marginBottom = 0 + 'px';
       }
     });
     teslaCardElement.querySelectorAll<HTMLElement>('.acc_text').forEach(icontext => {
