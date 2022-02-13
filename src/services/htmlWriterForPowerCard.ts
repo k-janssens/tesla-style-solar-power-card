@@ -37,21 +37,35 @@ export class HtmlWriterForPowerCard {
         style="${'width:' + 9 * this.pxRate + 'px; height: ' + 9 * this.pxRate + 'px; padding:' + 5 * this.pxRate + 'px;'}"
         @click="${() => this._handleClick(bubblClickEntitySlotHassState)}"
       >
-        ${extraValue !== null
-          ? html` <div
-              class="acc_text_extra"
-              style="font-size:${3 * this.pxRate + 'px'};
+        ${
+          extraValue !== null
+            ? html` <div
+                  class="acc_text_extra"
+                  style="font-size:${3 * this.pxRate + 'px'};
                         top: ${1 * this.pxRate + 'px'};
                         width: ${10 * this.pxRate + 'px'};"
-            >
-              ${extraValue} ${extraUnitOfMeasurement}
-            </div>`
-          : html``}
-        <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
-        <div
-          class="acc_text"
-          style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
-        >
+                >
+                  ${extraValue} ${extraUnitOfMeasurement}
+                </div>
+                <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
+                <div
+                  class="acc_text"
+                  style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
+                ></div>`
+            : html``
+        }
+        
+          ${
+            extraValue === null
+              ? html` <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
+                  <div
+                    class="acc_text"
+                    style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate - 10 + 'px'}; width: ${10 * this.pxRate +
+                    'px'}"
+                  ></div>`
+              : html``
+          }
+          
           ${mainValue} <br />
           ${mainUnitOfMeasurement}
         </div>
