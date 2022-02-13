@@ -103,7 +103,17 @@ export class HtmlWriterForPowerCard {
     if (batteryValue <= 5) TempSocValue = 0;
 
     const batteryStateRoundedValue = Math.ceil(TempSocValue / 10) * 10;
-    let batteryStateIconString = '-' + batteryStateRoundedValue.toString();
+    let batteryStateIconString = ''; // '-' + batteryStateRoundedValue.toString();
+
+    if (batteryStateRoundedValue >= 70) {
+      batteryStateIconString = '-high';
+    } else if (batteryStateRoundedValue > 40 && batteryStateRoundedValue <= 70) {
+      batteryStateIconString = '-medium';
+    } else if (batteryStateRoundedValue > 10 && batteryStateRoundedValue <= 40) {
+      batteryStateIconString = '-low';
+    } else {
+      batteryStateIconString = '-outline'; // empty
+    }
 
     // show charging icon beside battery state
     let batteryCharging: string = '-charging';
@@ -111,8 +121,6 @@ export class HtmlWriterForPowerCard {
       batteryCharging = '';
     }
 
-    if (batteryStateRoundedValue === 100) batteryStateIconString = ''; // full
-    if (batteryStateRoundedValue <= 5) batteryStateIconString = '-outline'; // empty
     return 'mdi:battery' + batteryCharging + batteryStateIconString;
   }
 
