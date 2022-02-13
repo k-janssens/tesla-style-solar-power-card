@@ -659,13 +659,14 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     .acc_container {
         height: 40px;
         width: 40px;
-        border: 1px solid black;
+        border: 2px solid black;
         border-radius: 100px;
         padding: 22px;
         color: var(--primary-text-color);
         border-color: var(--primary-text-color);
         position:relative;
         cursor:pointer;
+        background-color: rgba(255, 0, 0, 0.2)
     }
     .acc_icon {
         --mdc-icon-size: 40px;
