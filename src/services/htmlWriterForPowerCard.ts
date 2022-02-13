@@ -34,7 +34,7 @@ export class HtmlWriterForPowerCard {
     return html` <div class="acc_td ${cssSelector}">
       <div
         class="acc_container ${bubblClickEntitySlot}"
-        style="${'width:' + 12 * this.pxRate + 'px; height: ' + 12 * this.pxRate + 'px; padding:' + 5 * this.pxRate + 'px;'}"
+        style="${'width:' + 9 * this.pxRate + 'px; height: ' + 9 * this.pxRate + 'px; padding:' + 5 * this.pxRate + 'px;'}"
         @click="${() => this._handleClick(bubblClickEntitySlotHassState)}"
       >
         ${
@@ -42,7 +42,7 @@ export class HtmlWriterForPowerCard {
             ? html`
                 <div
                   class="acc_text_extra"
-                  style="font-size:${3 * this.pxRate + 'px'};
+                  style="font-size:${2 * this.pxRate + 'px'};
                         top: ${1 * this.pxRate + 'px'};
                         width: ${10 * this.pxRate + 'px'};"
                 >
