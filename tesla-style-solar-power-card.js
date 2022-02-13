@@ -310,6 +310,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     .acc_text_extra {
         text-align: center;
         white-space: nowrap;
+        font-weight: bold;
     }
     .acc_text_extra {
       overflow: hidden;
