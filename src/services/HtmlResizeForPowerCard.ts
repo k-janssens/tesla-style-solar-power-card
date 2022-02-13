@@ -34,13 +34,16 @@ export class HtmlResizeForPowerCard {
     teslaCardElement.querySelectorAll('ha-icon').forEach((_currentValue, currentIndex, icons) => {
       const icon = <HTMLElement>icons[currentIndex].shadowRoot?.querySelector('ha-svg-icon');
       const { className } = icons[currentIndex];
-      if (icon != null) {
-        icon.style.height = 9 * pxRate + 'px';
-        icon.style.width = 9 * pxRate + 'px';
-      }
       if (className === 'ha-icon-top') {
         icon.style.marginTop = -10 + 'px';
         icon.style.marginBottom = 6 + 'px';
+        if (icon != null) {
+          icon.style.height = 9 * pxRate + 'px';
+          icon.style.width = 9 * pxRate + 'px';
+        }
+      } else if (icon != null) {
+        icon.style.height = 7 * pxRate + 'px';
+        icon.style.width = 7 * pxRate + 'px';
       }
     });
     teslaCardElement.querySelectorAll<HTMLElement>('.acc_text').forEach(icontext => {

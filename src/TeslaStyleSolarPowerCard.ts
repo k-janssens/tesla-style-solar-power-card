@@ -666,6 +666,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         border-color: var(--primary-text-color);
         position:relative;
         cursor:pointer;
+        background-color: rgba(210, 210, 210, 0.2)
     }
     .acc_icon {
         --mdc-icon-size: 40px;
@@ -722,9 +723,9 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     #grid_to_battery_entity_line,
     #appliance1_consumption_entity_line,
     #appliance2_consumption_entity_line{
-      stroke:var(--info-color);
+      stroke:#1CF1AA;
       fill:none;
-      stroke-width:1;
+      stroke-width:2;
     }
 
     .generation_entity {
@@ -766,7 +767,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
     #battery_to_house_entity_line,
     #battery_to_grid_entity_line{
-      stroke:var(--success-color);
+      stroke:#33EEA1;
     }
     #battery_to_house_entity_circle,
     #battery_to_grid_entity_circle{
