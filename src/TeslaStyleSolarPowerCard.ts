@@ -676,7 +676,6 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         text-align: center;
         white-space: nowrap;
         font-weight: bold;
-        font-family: monospace;
     }
     .acc_text_extra {
       overflow: hidden;

@@ -40,20 +40,12 @@ export class HtmlWriterForPowerCard {
         ${
           extraValue !== null
             ? html`
-                <div
-                  class="acc_text_extra"
-                  style="font-size:${3 * this.pxRate + 'px'};
-                        top: ${1 * this.pxRate + 'px'};
-                        width: ${10 * this.pxRate + 'px'};"
-                >
-                  ${extraValue} ${extraUnitOfMeasurement}
-                </div>
                 <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
                 <div
                   class="acc_text"
                   style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
                 >
-                  ${mainValue} ${mainUnitOfMeasurement}
+                  ${extraValue} ${extraUnitOfMeasurement}
                 </div>
               `
             : html`
@@ -105,9 +97,9 @@ export class HtmlWriterForPowerCard {
     const batteryStateRoundedValue = Math.ceil(TempSocValue / 10) * 10;
     let batteryStateIconString = ''; // '-' + batteryStateRoundedValue.toString();
 
-    if (batteryStateRoundedValue >= 70) {
+    if (batteryStateRoundedValue >= 80) {
       batteryStateIconString = '-high';
-    } else if (batteryStateRoundedValue > 40 && batteryStateRoundedValue <= 70) {
+    } else if (batteryStateRoundedValue > 40 && batteryStateRoundedValue <= 80) {
       batteryStateIconString = '-medium';
     } else if (batteryStateRoundedValue > 10 && batteryStateRoundedValue <= 40) {
       batteryStateIconString = '-low';

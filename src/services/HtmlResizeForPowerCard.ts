@@ -33,18 +33,18 @@ export class HtmlResizeForPowerCard {
     });
     teslaCardElement.querySelectorAll('ha-icon').forEach((_currentValue, currentIndex, icons) => {
       const icon = <HTMLElement>icons[currentIndex].shadowRoot?.querySelector('ha-svg-icon');
-      const { className } = icons[currentIndex];
+      // const { className } = icons[currentIndex];
       if (icon != null) {
         icon.style.height = 9 * pxRate + 'px';
         icon.style.width = 9 * pxRate + 'px';
       }
-      if (className === 'ha-icon-top') {
-        icon.style.marginTop = -10 + 'px';
-        icon.style.marginBottom = 3 + 'px';
-      } else {
-        icon.style.marginTop = -2 + 'px';
-        icon.style.marginBottom = 0 + 'px';
-      }
+      // if (className === 'ha-icon-top') {
+      icon.style.marginTop = -12 + 'px';
+      icon.style.marginBottom = 5 + 'px';
+      // } else {
+      //   icon.style.marginTop = -2 + 'px';
+      //   icon.style.marginBottom = 0 + 'px';
+      // }
     });
     teslaCardElement.querySelectorAll<HTMLElement>('.acc_text').forEach(icontext => {
       icontext.style['font-size'] = 3 * pxRate + 'px';
