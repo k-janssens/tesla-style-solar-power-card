@@ -767,16 +767,16 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
     #battery_to_house_entity_line,
     #battery_to_grid_entity_line{
-      stroke:#33EEA1;
+      stroke: #35C3DF;
     }
     #battery_to_house_entity_circle,
     #battery_to_grid_entity_circle{
-      fill: #33EEA1;
+      fill: #35C3DF;
     }
     .battery_extra_entity,
     .battery_entity{
-      border: 2px solid #33EEA1;
-      color: #33EEA1;
+      border: 2px solid #35C3DF;
+      color: #35C3DF;
       background-color: rgba(160, 245, 210, 0.2)
     }
     .battery_extra_text{
