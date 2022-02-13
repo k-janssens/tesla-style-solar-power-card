@@ -667,6 +667,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         position:relative;
         cursor:pointer;
         background-color: rgba(210, 210, 210, 0.2)
+        font-family: monospace;
     }
     .acc_icon {
         --mdc-icon-size: 40px;

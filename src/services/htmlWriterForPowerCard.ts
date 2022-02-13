@@ -42,7 +42,7 @@ export class HtmlWriterForPowerCard {
             ? html`
                 <div
                   class="acc_text_extra"
-                  style="font-size:${2 * this.pxRate + 'px'};
+                  style="font-size:${3 * this.pxRate + 'px'};
                         top: ${1 * this.pxRate + 'px'};
                         width: ${10 * this.pxRate + 'px'};"
                 >

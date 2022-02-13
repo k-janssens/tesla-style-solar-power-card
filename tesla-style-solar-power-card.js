@@ -192,7 +192,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
         ${null!==o?U`
                 <div
                   class="acc_text_extra"
-                  style="font-size:${2*this.pxRate+"px"};
+                  style="font-size:${3*this.pxRate+"px"};
                         top: ${1*this.pxRate+"px"};
                         width: ${10*this.pxRate+"px"};"
                 >
@@ -302,6 +302,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
         position:relative;
         cursor:pointer;
         background-color: rgba(210, 210, 210, 0.2)
+        font-family: monospace;
     }
     .acc_icon {
         --mdc-icon-size: 40px;
