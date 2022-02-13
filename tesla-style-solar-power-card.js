@@ -372,10 +372,11 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       color: var(--warning-color);
     }
     .house_entity{
+      color: #1CF1AA;
     }
     .appliance1_consumption_entity,
     .appliance2_consumption_entity {
-      
+      color: #1CF1AA;
     }
     .house_entity,
     .appliance1_consumption_entity,
