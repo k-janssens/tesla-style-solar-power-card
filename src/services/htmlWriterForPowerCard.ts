@@ -48,7 +48,10 @@ export class HtmlWriterForPowerCard {
             </div>`
           : html``}
         <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
-        <div class="acc_text" style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}">
+        <div
+          class="acc_text"
+          style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate - 10 + 'px'}; width: ${10 * this.pxRate + 'px'}"
+        >
           ${mainValue} ${mainUnitOfMeasurement}
         </div>
       </div>
@@ -66,7 +69,7 @@ export class HtmlWriterForPowerCard {
     extraUnitOfMeasurement: string | undefined = undefined
   ): TemplateResult {
     if (extraValue !== undefined) {
-      if (icon == 'mdi:battery-medium' || icon == 'mdi:battery'){
+      if (icon === 'mdi:battery-medium' || icon === 'mdi:battery') {
         icon = this.getBatteryIcon(parseFloat(extraValue), mainValue);
       }
     }
@@ -113,17 +116,17 @@ export class HtmlWriterForPowerCard {
     return html` <div
       class="acc_line acc_appliance${applianceNumber}_line"
       style="
-        height:${(height * this.pxRate)-((applianceNumber-1)*5)+'px'}
+        height:${height * this.pxRate - (applianceNumber - 1) * 5 + 'px'}
         width:10px};
-        right:${(9.5 * this.pxRate) + 10 + 'px'};
+        right:${9.5 * this.pxRate + 10 + 'px'};
         ${verticalPosition}
         position:absolute"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox='${'0 0 '+ ((12*this.pxRate)-((applianceNumber-1)*5)) + ' ' +((12*this.pxRate)-((applianceNumber-1)*5))}'
+        viewBox="${'0 0 ' + (12 * this.pxRate - (applianceNumber - 1) * 5) + ' ' + (12 * this.pxRate - (applianceNumber - 1) * 5)}"
         preserveAspectRatio="xMinYMax slice"
-        style="height:${(height * this.pxRate)-((applianceNumber-1)*5)+'px'};width:10px}"
+        style="height:${height * this.pxRate - (applianceNumber - 1) * 5 + 'px'};width:10px}"
         class="acc_appliance${applianceNumber}_line_svg"
       >
         ${this.writeCircleAndLine('appliance' + applianceNumber + '_consumption_entity', pathDAttribute)}
