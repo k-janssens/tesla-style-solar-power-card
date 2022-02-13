@@ -666,7 +666,6 @@ export class TeslaStyleSolarPowerCard extends LitElement {
         border-color: var(--primary-text-color);
         position:relative;
         cursor:pointer;
-        background-color: rgba(255, 0, 0, 0.2)
     }
     .acc_icon {
         --mdc-icon-size: 40px;
@@ -729,23 +728,25 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
 
     .generation_entity {
-      border: 1px solid var(--warning-color);
+      border: 2px solid var(--warning-color);
+      background-color: rgba(255, 220, 180, 0.2)
     }
     .generation_entity .acc_icon,
     .generation_entity{
       color: var(--warning-color);
     }
     .house_entity{
-      border: 1px solid var(--info-color);
     }
     .appliance1_consumption_entity,
     .appliance2_consumption_entity {
-      border: 1px solid var(--info-color);
+      
     }
     .house_entity,
     .appliance1_consumption_entity,
     .appliance2_consumption_entity{
-      color: var(--info-color);
+      border: 2px solid #1CF1AA;
+      background-color: rgba(180, 250, 225, 0.2)
+      color: #1CF1AA;
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -756,7 +757,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     #grid_to_house_entity_circle,
     #appliance1_consumption_entity_circle,
     #appliance2_consumption_entity_circle{
-      fill:var(--info-color);
+      fill: #1CF1AA;
     }
     #generation_to_house_entity_circle,
     #generation_to_grid_entity_circle,
@@ -769,12 +770,13 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
     #battery_to_house_entity_circle,
     #battery_to_grid_entity_circle{
-      fill:var(--success-color);
+      fill: #33EEA1;
     }
     .battery_extra_entity,
     .battery_entity{
-      border: 1px solid var(--success-color);
-      color: var(--success-color);
+      border: 2px solid #33EEA1;
+      color: #33EEA1;
+      background-color: rgba(160, 245, 210, 0.2)
     }
     .battery_extra_text{
       position:absolute;
