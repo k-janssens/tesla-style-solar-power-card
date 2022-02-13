@@ -54,12 +54,13 @@ export class HtmlWriterForPowerCard {
                 ></div>
                 ${mainValue} ${mainUnitOfMeasurement}`
             : html`
-                <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
+                <ha-icon class="acc_icon" icon="${icon}" style="margin-top: -10px;margin-bottom:4px;"></ha-icon>
                 <div
                   class="acc_text"
                   style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
                 ></div>
-                ${mainValue} ${mainUnitOfMeasurement}
+                ${mainValue} <br />
+                ${mainUnitOfMeasurement}
               `
         }
         </div>

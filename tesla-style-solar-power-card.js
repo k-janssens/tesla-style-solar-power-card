@@ -203,12 +203,12 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 ></div>
                 ${t} ${e}`:U`
-                <ha-icon class="acc_icon" icon="${n}"></ha-icon>
+                <ha-icon class="acc_icon" icon="${n}" style="margin-top: -10px;margin-bottom:4px;"></ha-icon>
                 <div
                   class="acc_text"
                   style="font-size:${3*this.pxRate+"px"}; margin-top:${-.5*this.pxRate+"px"}; width: ${10*this.pxRate+"px"}"
                 ></div>
-                ${t} ${e}
+                ${t} <br /> ${e}
               `}
         </div>
       </div>
