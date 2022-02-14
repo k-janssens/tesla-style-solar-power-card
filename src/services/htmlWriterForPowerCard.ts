@@ -31,9 +31,10 @@ export class HtmlWriterForPowerCard {
     extraValue: string | null = null,
     extraUnitOfMeasurement: string | null = null
   ): TemplateResult {
+    const entityActive = mainValue !== 0 ? bubblClickEntitySlot + '-active' : '';
     return html` <div class="acc_td ${cssSelector}">
       <div
-        class="acc_container ${bubblClickEntitySlot}"
+        class="acc_container ${bubblClickEntitySlot} ${entityActive}"
         style="${'width:' + 9 * this.pxRate + 'px; height: ' + 9 * this.pxRate + 'px; padding:' + 5 * this.pxRate + 'px;'}"
         @click="${() => this._handleClick(bubblClickEntitySlotHassState)}"
       >

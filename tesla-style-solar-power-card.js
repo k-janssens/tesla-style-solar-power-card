@@ -185,7 +185,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
      */
 (window.litElementVersions||(window.litElementVersions=[])).push("2.5.1");const nt={};class st extends K{static getStyles(){return this.styles}static _getUniqueStyles(){if(this.hasOwnProperty(JSCompiler_renameProperty("_styles",this)))return;const t=this.getStyles();if(Array.isArray(t)){const e=(t,i)=>t.reduceRight(((t,i)=>Array.isArray(i)?e(i,t):(t.add(i),t)),i),i=e(t,new Set),n=[];i.forEach((t=>n.unshift(t))),this._styles=n}else this._styles=void 0===t?[]:[t];this._styles=this._styles.map((t=>{if(t instanceof CSSStyleSheet&&!X){const e=Array.prototype.slice.call(t.cssRules).reduce(((t,e)=>t+e.cssText),"");return new et(String(e),tt)}return t}))}initialize(){super.initialize(),this.constructor._getUniqueStyles(),this.renderRoot=this.createRenderRoot(),window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot&&this.adoptStyles()}createRenderRoot(){return this.attachShadow(this.constructor.shadowRootOptions)}adoptStyles(){const t=this.constructor._styles;0!==t.length&&(void 0===window.ShadyCSS||window.ShadyCSS.nativeShadow?X?this.renderRoot.adoptedStyleSheets=t.map((t=>t instanceof CSSStyleSheet?t:t.styleSheet)):this._needsShimAdoptedStyleSheets=!0:window.ShadyCSS.ScopingShim.prepareAdoptedCssText(t.map((t=>t.cssText)),this.localName))}connectedCallback(){super.connectedCallback(),this.hasUpdated&&void 0!==window.ShadyCSS&&window.ShadyCSS.styleElement(this)}update(t){const e=this.render();super.update(t),e!==nt&&this.constructor.render(e,this.renderRoot,{scopeName:this.localName,eventContext:this}),this._needsShimAdoptedStyleSheets&&(this._needsShimAdoptedStyleSheets=!1,this.constructor._styles.forEach((t=>{const e=document.createElement("style");e.textContent=t.cssText,this.renderRoot.appendChild(e)})))}render(){return nt}}st.finalized=!0,st.render=(t,e,n)=>{if(!n||"object"!=typeof n||!n.scopeName)throw new Error("The `scopeName` option is required.");const s=n.scopeName,r=V.has(e),o=I&&11===e.nodeType&&!!e.host,a=o&&!F.has(s),l=a?document.createDocumentFragment():e;if(((t,e,n)=>{let s=V.get(e);void 0===s&&(i(e,e.firstChild),V.set(e,s=new P(Object.assign({templateFactory:O},n))),s.appendInto(e)),s.setValue(t),s.commit()})(t,l,Object.assign({templateFactory:L(s)},n)),a){const t=V.get(l);V.delete(l);const n=t.value instanceof w?t.value.template:void 0;z(s,l,n),i(e,e.firstChild),e.appendChild(l),V.set(e,t)}!r&&o&&window.ShadyCSS.styleElement(e.host)},st.shadowRootOptions={mode:"open"};class rt{constructor(t,e){this.speed=0,this.startPosition=0,this.currentPosition=0,this.currentDelta=0,this.maxPosition=30,this.unitOfMeasurement="",this.accText="",this.accTextclassName="accText",this.entity="",this.color="stroke:var(--info-color)",this.circleColor="var(--primary-color)",this.prevTimestamp=0,this.accTextElement=null,this.entity=t,this.entitySlot=e,this.value=0}setValueAndUnitOfMeasurement(t,e){if(void 0===t)return void(this.value=0);if(void 0===e)return void(this.value=t);const i=parseFloat(t);switch(e){case"W":case"kW":this.value=i,"kW"===e&&(this.value*=1e3),this.unitOfMeasurement="W",this.value=Math.round(this.value);break;case"%":this.value=i,this.unitOfMeasurement=e;break;default:this.value=t,this.unitOfMeasurement=e}}setSpeed(){this.speed=0,0!==Math.abs(this.value)&&(this.speed=rt.SPEEDFACTOR*this.value/1e3)}}rt.SPEEDFACTOR=.04;class ot{constructor(t,e){this.teslaCard=t,this.solarCardElements=t.solarCardElements,this.pxRate=t.pxRate,this.hass=e}writeBubbleDiv(t,e,i,n,s=null,r=null,o=null,a=null){return U` <div class="acc_td ${i}">
       <div
-        class="acc_container ${s}"
+        class="acc_container ${s} ${0!==t?s+"-active":""}"
         style="${"width:"+9*this.pxRate+"px; height: "+9*this.pxRate+"px; padding:"+5*this.pxRate+"px;"}"
         @click="${()=>this._handleClick(r)}"
       >
@@ -363,7 +363,9 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     .generation_entity .acc_icon,
     .generation_entity{
       color: var(--warning-color);
-      box-shadow: 0px 0px 5px 0px #F8AE69;
+    }
+    .generation_entity-active {
+      box-shadow: 0px 0px 10px 0px #F8AE69;
     }
     .house_entity{
       color: #1CF1AA;
@@ -378,7 +380,10 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       border: 2px solid #1CF1AA;
       background-color: rgba(180, 250, 225, 0.2)
       color: #1CF1AA;
-      box-shadow: 0px 0px 5px 0px #1CF1AA;
+    }
+    .house_entity-active,
+    .appliance1_consumption_entity-active {
+      box-shadow: 0px 0px 10px 0px #1CF1AA;
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -409,11 +414,12 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       border: 2px solid #35C3DF;
       color: #35C3DF;
       background-color: rgba(160, 245, 210, 0.2)
-      box-shadow: 0px 0px 5px 0px #35C3DF;
+    }
+    .battery_entity-active {
+      box-shadow: 0px 0px 10px 0px #35C3DF;
     }
     .battery_entity {
       color: #35C3DF;
-      box-shadow: 0px 0px 5px 0px #ffffff;
     }
     .battery_extra_text {
       position:absolute;
@@ -422,7 +428,9 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     .grid_entity {
       border: 2px solid #ffffff;
       color: #ffffff;
-      box-shadow: 0px 0px 5px 0px #ffffff;
+    }
+    .grid_entity-active {
+      box-shadow: 0px 0px 10px 0px #ffffff;
     }
     br.clear {
       clear:both;
