@@ -197,12 +197,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
                 >
                   ${t} ${e}
                 </div>
-                <div
-                  class="acc_text_extra"
-                  style="width: ${10*this.pxRate+"px"}"
-                >
-                  ${o}${a}
-                </div>
+                <div class="acc_text_extra" style="width: ${10*this.pxRate+"px"}">${o}${a}</div>
               `:W`
                 <ha-icon class="ha-icon-top" icon="${n}"></ha-icon>
                 <div
@@ -372,7 +367,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     }
     .generation_entity-active {
       box-shadow: 0px 0px 10px 0px #F8AE69;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(240, 200, 170, 0.5)
     }
     .house_entity{
       color: #1CF1AA;
@@ -391,7 +386,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     .house_entity-active,
     .appliance1_consumption_entity-active {
       box-shadow: 0px 0px 10px 0px #1CF1AA;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(150, 240, 210, 0.5)
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -425,7 +420,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     }
     .battery_entity-active {
       box-shadow: 0px 0px 10px 0px #71EEFF;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(170, 239, 249, 0.5)
     }
     .battery_entity {
       color: #71EEFF;

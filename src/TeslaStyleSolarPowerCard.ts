@@ -739,7 +739,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
     .generation_entity-active {
       box-shadow: 0px 0px 10px 0px #F8AE69;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(240, 200, 170, 0.5)
     }
     .house_entity{
       color: #1CF1AA;
@@ -758,7 +758,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     .house_entity-active,
     .appliance1_consumption_entity-active {
       box-shadow: 0px 0px 10px 0px #1CF1AA;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(150, 240, 210, 0.5)
     }
     #generation_to_house_entity_line,
     #generation_to_grid_entity_line,
@@ -792,7 +792,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     }
     .battery_entity-active {
       box-shadow: 0px 0px 10px 0px #71EEFF;
-      background-color: rgba(210, 210, 210, 0.5)
+      background-color: rgba(170, 239, 249, 0.5)
     }
     .battery_entity {
       color: #71EEFF;
