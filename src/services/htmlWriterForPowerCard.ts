@@ -44,16 +44,21 @@ export class HtmlWriterForPowerCard {
                 <ha-icon class="acc_icon" icon="${icon}"></ha-icon>
                 <div
                   class="acc_text"
-                  style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
+                  style="font-size:${3 * this.pxRate + 'px'}; margin-left: -2px; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 *
+                    this.pxRate +
+                  'px'}"
                 >
-                  ${extraValue} ${extraUnitOfMeasurement}
+                  ${mainValue} ${mainUnitOfMeasurement}
                 </div>
+                <div class="acc_text_extra" style="width: ${10 * this.pxRate + 'px'}">${extraValue}${extraUnitOfMeasurement}</div>
               `
             : html`
                 <ha-icon class="ha-icon-top" icon="${icon}"></ha-icon>
                 <div
                   class="acc_text"
-                  style="font-size:${3 * this.pxRate + 'px'}; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 * this.pxRate + 'px'}"
+                  style="font-size:${3 * this.pxRate + 'px'}; margin-left: -2px; margin-top:${-0.5 * this.pxRate + 'px'}; width: ${10 *
+                    this.pxRate +
+                  'px'}"
                 >
                   ${mainValue} ${mainUnitOfMeasurement}
                 </div>
