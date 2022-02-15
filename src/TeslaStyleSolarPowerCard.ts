@@ -368,9 +368,10 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     return this.writeIconBubble(
       applianceEntities,
       'acc_appliance' + applianceNumber,
-      'appliance' + applianceNumber + '_icon',
+      'battery_icon',
       'appliance' + applianceNumber + '_consumption_entity',
-      'appliance' + applianceNumber + '_extra_entity'
+      'appliance' + applianceNumber + '_extra_entity',
+      true
     );
   }
 
