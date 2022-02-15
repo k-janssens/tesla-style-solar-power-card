@@ -100,7 +100,7 @@ export class HtmlWriterForPowerCard {
     let TempSocValue = batteryValue;
     if (batteryValue <= 5) TempSocValue = 0;
 
-    const batteryStateRoundedValue = Math.floor(TempSocValue / 10) * 10;
+    const batteryStateRoundedValue = TempSocValue; // Math.floor(TempSocValue / 10) * 10;
     let batteryStateIconString = ''; // '-' + batteryStateRoundedValue.toString();
 
     if (batteryStateRoundedValue >= 90) {
