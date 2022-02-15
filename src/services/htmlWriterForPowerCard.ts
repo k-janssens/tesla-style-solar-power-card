@@ -97,8 +97,8 @@ export class HtmlWriterForPowerCard {
   }
 
   private getBatteryIcon(batteryValue: number, batteryChargeDischargeValue: number) {
-    let TempSocValue = batteryValue;
-    if (batteryValue <= 5) TempSocValue = 0;
+    const TempSocValue = batteryValue;
+    // if (batteryValue <= 5) TempSocValue = 0;
 
     const batteryStateRoundedValue = TempSocValue; // Math.floor(TempSocValue / 10) * 10;
     let batteryStateIconString = ''; // '-' + batteryStateRoundedValue.toString();
