@@ -103,11 +103,11 @@ export class HtmlWriterForPowerCard {
     const batteryStateRoundedValue = Math.ceil(TempSocValue / 10) * 10;
     let batteryStateIconString = ''; // '-' + batteryStateRoundedValue.toString();
 
-    if (batteryStateRoundedValue >= 80) {
+    if (batteryStateRoundedValue >= 90) {
       batteryStateIconString = '-high';
-    } else if (batteryStateRoundedValue > 40 && batteryStateRoundedValue <= 80) {
+    } else if (batteryStateRoundedValue > 50 && batteryStateRoundedValue <= 90) {
       batteryStateIconString = '-medium';
-    } else if (batteryStateRoundedValue > 10 && batteryStateRoundedValue <= 40) {
+    } else if (batteryStateRoundedValue > 10 && batteryStateRoundedValue <= 50) {
       batteryStateIconString = '-low';
     } else {
       batteryStateIconString = '-outline'; // empty

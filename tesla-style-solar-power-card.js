@@ -209,7 +209,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
               `}
         </div>
       </div>
-    </div>`}writeBatteryBubbleDiv(t,e,i,n,s,r,o,a){return void 0!==o&&("mdi:battery-medium"!==n&&"mdi:battery"!==n||(n=this.getBatteryIcon(parseFloat(o),t))),this.writeBubbleDiv(t,e,i,n,s,r,o,a)}getBatteryIcon(t,e){let i=t;t<=5&&(i=0);const n=10*Math.ceil(i/10);let s="";s=n>=80?"-high":n>40&&n<=80?"-medium":n>10&&n<=40?"-low":"-outline";let r="-charging";return e<=0&&(r=""),"mdi:battery"+r+s}writeAppliancePowerLineAndCircle(t,e){if(null==this.solarCardElements.get("appliance"+t+"_consumption_entity"))return W``;let i;return i=1===t?"top:"+22.5*this.pxRate+"px;":"bottom:"+15*this.pxRate+"px;",W` <div
+    </div>`}writeBatteryBubbleDiv(t,e,i,n,s,r,o,a){return void 0!==o&&("mdi:battery-medium"!==n&&"mdi:battery"!==n||(n=this.getBatteryIcon(parseFloat(o),t))),this.writeBubbleDiv(t,e,i,n,s,r,o,a)}getBatteryIcon(t,e){let i=t;t<=5&&(i=0);const n=10*Math.ceil(i/10);let s="";s=n>=90?"-high":n>50&&n<=90?"-medium":n>10&&n<=50?"-low":"-outline";let r="-charging";return e<=0&&(r=""),"mdi:battery"+r+s}writeAppliancePowerLineAndCircle(t,e){if(null==this.solarCardElements.get("appliance"+t+"_consumption_entity"))return W``;let i;return i=1===t?"top:"+22.5*this.pxRate+"px;":"bottom:"+15*this.pxRate+"px;",W` <div
       class="acc_line acc_appliance${t}_line"
       style="
         height:${12*this.pxRate-5*(t-1)+"px"}
