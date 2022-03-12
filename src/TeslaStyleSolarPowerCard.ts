@@ -372,7 +372,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
       icon,
       'appliance' + applianceNumber + '_consumption_entity',
       'appliance' + applianceNumber + '_extra_entity',
-      true
+      applianceNumber === 1
     );
   }
 
