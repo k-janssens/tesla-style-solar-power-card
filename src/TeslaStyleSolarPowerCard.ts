@@ -60,7 +60,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
     if (this.config.house_icon == null) this.config.house_icon = 'mdi:home';
     if (this.config.battery_icon == null) this.config.battery_icon = 'mdi:battery-medium';
     if (this.config.appliance1_icon == null) this.config.appliance1_icon = 'mdi:car-sports';
-    if (this.config.appliance2_icon == null) this.config.appliance2_icon = 'mdi:air-filter';
+    if (this.config.appliance2_icon == null) this.config.appliance2_icon = 'mdi:home-outline';
 
     this.createSolarCardElements();
     if (!this.config.energy_flow_diagramm) {
@@ -365,7 +365,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
 
   private writeApplianceIconBubble(applianceNumber: number): TemplateResult {
     const applianceEntities = ['appliance' + applianceNumber + '_consumption_entity'];
-    const icon = applianceNumber === 1 ? 'battery_icon' : 'home-outline';
+    const icon = applianceNumber === 1 ? 'battery_icon' : 'appliance2_icon';
     return this.writeIconBubble(
       applianceEntities,
       'acc_appliance' + applianceNumber,
