@@ -365,10 +365,11 @@ export class TeslaStyleSolarPowerCard extends LitElement {
 
   private writeApplianceIconBubble(applianceNumber: number): TemplateResult {
     const applianceEntities = ['appliance' + applianceNumber + '_consumption_entity'];
+    const icon = applianceNumber === 1 ? 'battery_icon' : 'home-outline';
     return this.writeIconBubble(
       applianceEntities,
       'acc_appliance' + applianceNumber,
-      'battery_icon',
+      icon,
       'appliance' + applianceNumber + '_consumption_entity',
       'appliance' + applianceNumber + '_extra_entity',
       true
