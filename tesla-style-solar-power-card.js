@@ -384,7 +384,8 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
       color: #1CF1AA;
     }
     .house_entity-active,
-    .appliance1_consumption_entity-active {
+    .appliance1_consumption_entity-active,
+    .appliance2_consumption_entity-active {
       box-shadow: 0px 0px 10px 0px #1CF1AA;
       background-color: rgba(150, 240, 210, 0.5)
     }
