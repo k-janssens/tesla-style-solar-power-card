@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@babel/eslint-plugin": "^7.12.13",
-    "@open-wc/building-rollup": "^1.9.4",
+    "@open-wc/building-rollup": "^3.0.2",
     "@open-wc/eslint-config": "^4.2.0",
     "@open-wc/testing": "^3.0.4",
     "@rollup/plugin-node-resolve": "^11.2.0",
