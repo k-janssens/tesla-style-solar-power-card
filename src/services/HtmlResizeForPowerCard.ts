@@ -131,7 +131,7 @@ export class HtmlResizeForPowerCard {
       changeSelectorStyle('.acc_appliance' + value + '_line svg', 'height', 12 * pxRate - (value - 1) * 5 + 'px');
       selectorElement = <HTMLElement>teslaCardElement.querySelector('.acc_appliance' + value + '_line_svg');
       if (selectorElement !== null)
-        selectorElement.setAttribute('viewBox', '0 0 ' + (12 * pxRate - (value - 1) * 5) + ' ' + (12 * pxRate - (value - 1) * 5));
+        selectorElement.setAttribute('viewBox', '0 0 ' + (12 * pxRate - (value - 1) * 0) + ' ' + (12 * pxRate - (value - 1) * 0));
 
       const topElement = <HTMLElement>teslaCardElement.querySelector('.generation_entity');
       if (topElement === null && value === 1 && selectorElement !== null) {
