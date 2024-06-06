@@ -1,3 +1,15 @@
+# FIXES
+2024-06-06
+Er is een probleem in "/Users/kjanssens/IdeaProjects/tesla-style-solar-power-card/src/TeslaStyleSolarPowerCard.ts" omdat this.clientWidth 0 geeft ipv de echte widht.
+Opgelost met dit te vervangen door een fixed widh van 421
+
+```
+this.oldWidth = HtmlResizeForPowerCard.changeStylesDependingOnWidth(this, this.solarCardElements, 421, this.oldWidth);
+``` 
+
+
+
+
 # tesla-style-solar-power-card
 
 > **⚠ WARNING: BREAKING CONFIG CHANGE**
