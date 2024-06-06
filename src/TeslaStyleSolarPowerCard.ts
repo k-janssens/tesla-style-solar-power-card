@@ -97,7 +97,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
   async firstUpdated(): Promise<void> {
     // Give the browser a chance to paint
     await new Promise(r => setTimeout(r, 0));
-    this.oldWidth = HtmlResizeForPowerCard.changeStylesDependingOnWidth(this, this.solarCardElements, this.clientWidth, this.oldWidth);
+    this.oldWidth = HtmlResizeForPowerCard.changeStylesDependingOnWidth(this, this.solarCardElements, 421, this.oldWidth);
   }
 
   public connectedCallback(): void {
@@ -167,8 +167,8 @@ export class TeslaStyleSolarPowerCard extends LitElement {
   protected render(): TemplateResult | void {
     if (this.error !== '') return this._showError();
 
-    this.pxRate = this.clientWidth / 100;
-    const gap = this.clientWidth / 50;
+    this.pxRate = 421 / 100;
+    const gap = 421 / 50;
     const half = 22 * this.pxRate;
     //
     return html`
@@ -626,7 +626,7 @@ export class TeslaStyleSolarPowerCard extends LitElement {
 
   private redraw(ev: UIEvent) {
     if (this.hass && this.config && ev.type === 'resize') {
-      this.oldWidth = HtmlResizeForPowerCard.changeStylesDependingOnWidth(this, this.solarCardElements, this.clientWidth, this.oldWidth);
+      this.oldWidth = HtmlResizeForPowerCard.changeStylesDependingOnWidth(this, this.solarCardElements, 421, this.oldWidth);
     }
   }
 

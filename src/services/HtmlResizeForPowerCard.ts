@@ -9,6 +9,8 @@ export class HtmlResizeForPowerCard {
     newWidth: number,
     oldWidth: number
   ): number {
+    // alert(newWidth + ' -- ' + oldWidth);
+    // newWidth = 1000;
     if (document.readyState !== 'complete' || oldWidth === newWidth) return oldWidth;
     if (teslaCard.shadowRoot == null) return oldWidth;
     const teslaCardElement = <HTMLElement>teslaCard.shadowRoot.querySelector('#tesla-style-solar-power-card');
@@ -131,7 +133,7 @@ export class HtmlResizeForPowerCard {
       changeSelectorStyle('.acc_appliance' + value + '_line svg', 'height', 12 * pxRate - (value - 1) * 5 + 'px');
       selectorElement = <HTMLElement>teslaCardElement.querySelector('.acc_appliance' + value + '_line_svg');
       if (selectorElement !== null)
-        selectorElement.setAttribute('viewBox', '0 0 ' + (12 * pxRate - (value - 1) * 0) + ' ' + (12 * pxRate - (value - 1) * 0));
+        selectorElement.setAttribute('viewBox', '0 0 ' + (12 * pxRate - (value - 1) * 5) + ' ' + (12 * pxRate - (value - 1) * 5));
 
       const topElement = <HTMLElement>teslaCardElement.querySelector('.generation_entity');
       if (topElement === null && value === 1 && selectorElement !== null) {
