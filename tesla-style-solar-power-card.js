@@ -220,7 +220,7 @@ const Y=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="${"0 0 "+(12*this.pxRate-5*(t-1))+" "+(12*this.pxRate-5*(t-1))}"
+        viewBox="${"0 0 "+(12*this.pxRate*(t-1))+" "+(12*this.pxRate*(t-1))}"
         preserveAspectRatio="xMinYMax slice"
         style="height:${12*this.pxRate-5*(t-1)+"px"};width:10px}"
         class="acc_appliance${t}_line_svg"
